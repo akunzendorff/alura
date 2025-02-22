@@ -93,11 +93,11 @@ def alterar_status_restaurante():
 
     '''
     exibir_subtitulo("Alterar o status do restaurante.")
-    nome_restaurante = input("Digite o nome do restaurante que deseja alterar o status: ").strip().lower()
+    nome_restaurante = input("Digite o nome do restaurante que deseja alterar o status: ")
     restaurante_encontrado = False
 
     for restaurante in restaurantes:
-        if restaurante["nome"].strip().lower() == nome_restaurante:
+        if restaurante["nome"].strip().lower() == nome_restaurante.strip().lower():
             restaurante_encontrado = True
             restaurante["ativo"] = not restaurante["ativo"]
             mensagem = (f"O status do restaurante {nome_restaurante} foi alterado com sucesso!")
