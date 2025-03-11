@@ -312,64 +312,78 @@
 
 # # Adicione um método estático chamado verificar_disponibilidade à classe Livro que recebe um ano como parâmetro e retorna uma lista dos livros disponíveis publicados nesse ano.
 
-class Livro:
+# class Livro:
 
-    livros = []
+#     livros = []
 
-    def __init__(self, titulo, autor, ano_publicacao):
-        self.titulo = titulo
-        self.autor = autor
-        self.ano_publicacao = ano_publicacao
-        self.disponivel = True
+#     def __init__(self, titulo, autor, ano_publicacao):
+#         self.titulo = titulo
+#         self.autor = autor
+#         self.ano_publicacao = ano_publicacao
+#         self.disponivel = True
 
-    def __str__(self):
-        return f'Título: {self.titulo.ljust(20)} | Autor: {self.autor.ljust(20)} | Ano de publicação: {self.ano_publicacao}'
+#     def __str__(self):
+#         return f'Título: {self.titulo.ljust(20)} | Autor: {self.autor.ljust(20)} | Ano de publicação: {self.ano_publicacao}'
 
-    def emprestar(self):
-        self.disponivel = False
+#     def emprestar(self):
+#         self.disponivel = False
 
-    @staticmethod
-    def verificar_disponibilidade(ano):
-        livros_disponiveis = [livro for livro in Livro.livros if livro.ano_publicacao == ano and livro.disponivel]
-        return livros_disponiveis
+#     @staticmethod
+#     def verificar_disponibilidade(ano):
+#         livros_disponiveis = [livro for livro in Livro.livros if livro.ano_publicacao == ano and livro.disponivel]
+#         return livros_disponiveis
     
-livro1 = Livro('A Seleção', 'Kiera Cass', 2012)
-livro2 = Livro('A Elite', 'Kiera Cass', 2013)
-livro3 = Livro('A Escolha', 'Kiera Cass', 2014)
+# livro1 = Livro('A Seleção', 'Kiera Cass', 2012)
+# livro2 = Livro('A Elite', 'Kiera Cass', 2013)
+# livro3 = Livro('A Escolha', 'Kiera Cass', 2014)
 
-Livro.livros = [livro1, livro2, livro3]
+# Livro.livros = [livro1, livro2, livro3]
 
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Crie um arquivo chamado biblioteca.py e importe a classe Livro neste arquivo.
+# # Crie um arquivo chamado biblioteca.py e importe a classe Livro neste arquivo.
 
-from exercicios import Livro
+# from exercicios import Livro
 
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# No arquivo biblioteca.py, empreste o livro chamando o método emprestar e imprima se o livro está disponível ou não após o empréstimo.
+# # No arquivo biblioteca.py, empreste o livro chamando o método emprestar e imprima se o livro está disponível ou não após o empréstimo.
 
-livro_biblioteca = Livro('A Seleção', 'Kiera Cass', 2012)
-print(f'Antes de emprestar (biblioteca): Livro disponível? {livro_biblioteca.disponivel}')
-livro_biblioteca.emprestar()
-print(f'Depois de emprestar (biblioteca): Livro disponível? {livro_biblioteca.disponivel}')
+# livro_biblioteca = Livro('A Seleção', 'Kiera Cass', 2012)
+# print(f'Antes de emprestar (biblioteca): Livro disponível? {livro_biblioteca.disponivel}')
+# livro_biblioteca.emprestar()
+# print(f'Depois de emprestar (biblioteca): Livro disponível? {livro_biblioteca.disponivel}')
 
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# No arquivo biblioteca.py, utilize o método estático verificar_disponibilidade para obter a lista de livros disponíveis publicados em um ano específico.
+# # No arquivo biblioteca.py, utilize o método estático verificar_disponibilidade para obter a lista de livros disponíveis publicados em um ano específico.
 
-ano_especifico = 2020
-livros_disponiveis_ano = Livro.verificar_disponibilidade(ano_especifico)
-print(f'Livros disponíveis em {ano_especifico}: {livros_disponiveis_ano}')
+# ano_especifico = 2020
+# livros_disponiveis_ano = Livro.verificar_disponibilidade(ano_especifico)
+# print(f'Livros disponíveis em {ano_especifico}: {livros_disponiveis_ano}')
 
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Crie um arquivo chamado main.py, importe a classe Livro e, no arquivo main.py, instancie dois objetos da classe Livro e exiba a mensagem formatada utilizando o método str.
+# # Crie um arquivo chamado main.py, importe a classe Livro e, no arquivo main.py, instancie dois objetos da classe Livro e exiba a mensagem formatada utilizando o método str.
 
-from exercicios import Livro
+# from exercicios import Livro
 
-livro_main1 = Livro('A Seleção', 'Kiera Cass', 2012)
-livro_main2 = Livro('A Elite', 'Kiera Cass', 2013)
+# livro_main1 = Livro('A Seleção', 'Kiera Cass', 2012)
+# livro_main2 = Livro('A Elite', 'Kiera Cass', 2013)
 
-print(livro_main1)
-print(livro_main2)
+# print(livro_main1)
+# print(livro_main2)
+
+# # Com base no que vimos nessa aula sobre herança, crie uma classe Banco com dois atributos: nome e endereco. Em seguida, derive uma classe chamada Agencia que herda os atributos da classe Banco e inclua um atributo adicional chamado numero. Ambas as classes devem ter apenas o construtor.
+
+# class Banco:
+#   def __init__(self, nome, endereco):
+#     self._nome = nome
+#     self._endereco = endereco
+
+# # from banco import Banco
+ 
+# class Agencia(Banco):
+#   def __init__(self, nome, endereco, numero):
+#     super().__init__(nome, endereco)
+#     self._numero = numero
